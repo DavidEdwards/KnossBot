@@ -221,7 +221,7 @@ export default class Merchant extends Character {
             continue;
           }
 
-          Utils.l("Upgrade -> " + key + " grade=" + grade + " level=" + itemIndex + "->" + (itemIndex + 1));
+          Utils.l("Upgrade -> " + key + " grade=" + grade + " level=" + itemLevel + "->" + (itemLevel + 1));
 
           let item0 = itemListOfLevel.splice(0, 1);
           if (itemLevel >= 5 || grade == 1) {
@@ -256,7 +256,7 @@ export default class Merchant extends Character {
           let item0 = itemListOfLevel.splice(0, 1);
           let item1 = itemListOfLevel.splice(0, 1);
           let item2 = itemListOfLevel.splice(0, 1);
-          Utils.debug("Compound -> " + key + " grade=" + grade + " level=" + itemIndex + "->" + (itemIndex + 1) + " s1=" + item0[0].slot + " s2=" + item1[0].slot + " s3=" + item2[0].slot + " sc=" + this.compoundableScrollSlot2);
+          Utils.debug("Compound -> " + key + " grade=" + grade + " level=" + itemLevel + "->" + (itemLevel + 1) + " s1=" + item0[0].slot + " s2=" + item1[0].slot + " s3=" + item2[0].slot + " sc=" + this.compoundableScrollSlot2);
 
           if (itemLevel >= 2) {
             compound(item0[0].slot, item1[0].slot, item2[0].slot, this.compoundableScrollSlot2);
